@@ -13,6 +13,9 @@
 			// Inferencia de Tipos
 			InferenciaDeTipos.Demos();
 
+			// Inicializadores de Objetos y Colecciones
+			InicializadoresDeObjetosYColecciones.Demos();
+			
 			// Tipos Anonimos
 			TiposAnonimos.Demos();
 
