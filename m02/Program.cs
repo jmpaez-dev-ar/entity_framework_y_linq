@@ -4,7 +4,8 @@
 	{
 		static void Main(string[] args)
 		{
-			Delegados.Demos();
+			// Delegados.Demos();
+			MetodosAnonimos.Demos();
 
 			Console.ReadKey();
 		}

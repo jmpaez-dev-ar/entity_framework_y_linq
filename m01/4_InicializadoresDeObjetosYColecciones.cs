@@ -32,6 +32,9 @@ namespace m01
 
 		private static void DemoInicializadorDeObjetos()
 		{
+			Paciente paciente0 = new Paciente();
+
+
 			var paciente1 = new Paciente
 			{
 				Id = 1,
