@@ -1,6 +1,6 @@
 ﻿namespace m02
 {
-	public class _4_AccionYFunc
+	public class AccionYFunc
 	{
 		// Las clases Action<> y Func<> son delegados genéricos que permiten representar métodos con diversos parámetros y valores de retorno, ofreciendo flexibilidad en su manejo.
 

@@ -1,6 +1,4 @@
-﻿
-
-namespace m02
+﻿namespace m02
 {
 	public class Delegados
 	{
