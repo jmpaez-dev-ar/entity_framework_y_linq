@@ -1,4 +1,7 @@
-﻿namespace m02
+﻿using System.Timers;
+using Timer = System.Timers.Timer;
+
+namespace m02
 {
 	// MÉTODOS ANÓNIMOS
 	// Los métodos anónimos son funciones sin nombre definidas directamente en el lugar donde se necesitan, sin declarar un método por separado.Son útiles para tareas simples y locales, como:
@@ -13,11 +16,11 @@
 			Console.WriteLine("Métodos Anónimos");
 			Console.WriteLine("-----------------------------------\n");
 
-			//DemoMetodosSinAnonimos();
-			//DemoMetodosConAnonimos();
-			DemoMetodosAnonimos2();
-			//DemoMetodosAnonimos3();
-			//DemoMetodosAnonimosYEventos();
+			// DemoMetodosSinAnonimos();
+			// DemoMetodosConAnonimos();
+			// DemoMetodosAnonimos2();
+			// DemoMetodosAnonimos3();
+			// DemoMetodosAnonimosYEventos();
 		}
 
 		#region DemoMetodosSinAnonimos
@@ -86,12 +89,59 @@
 			// Filtrar los números pares
 			Console.WriteLine("\nPares:");
 			var pares = numeros.FindAll(
-										delegate (int x) 
-										{ 
-											return x % 2 == 0; 
+										delegate (int x)
+										{
+											return x % 2 == 0;
 										}
 									);
 			pares.ForEach(Console.WriteLine);
 		}
+
+		#region DemoMetodosAnonimos3
+		// Ejemplo 3: Ordenamiento Personalizado
+		/*
+		 Contexto: Ordenar una lista de cadenas por su longitud.
+		 */
+		public static void DemoMetodosAnonimos3()
+		{
+			Console.WriteLine("Métodos Anónimos con Delegados 3");
+			Console.WriteLine("-----------------------------------\n");
+
+			// Lista de productos
+			List<string> productos = new List<string> { "Notebook", "Monitor", "Mouse", "SSD", "Headset" };
+			Console.WriteLine("Productos:");
+			productos.ForEach(Imprimir);
+
+			// Ordenar por longitud
+			productos.Sort(delegate (string a, string b)
+			{
+				return a.Length.CompareTo(b.Length);
+			});
+
+			Console.WriteLine("\nProductos Ordenados por Longitud:");
+			productos.ForEach(Imprimir);
+		}
+
+		// Método que imprime un valor genérico
+		public static void Imprimir<T>(T valor)
+		{
+			Console.WriteLine(valor);
+		}
+		#endregion
+
+		#region DemoMetodosAnonimosYEventos
+		public static void DemoMetodosAnonimosYEventos()
+		{
+			Timer myTimer = new Timer(1000);
+			myTimer.Elapsed += delegate (System.Object source, ElapsedEventArgs e)
+			{
+				Console.WriteLine("Un segundo ha pasado.");
+			};
+
+			myTimer.Start();
+			Console.WriteLine("Presiona Enter para salir.");
+			Console.ReadLine();
+		}
+		#endregion
 	}
 }
