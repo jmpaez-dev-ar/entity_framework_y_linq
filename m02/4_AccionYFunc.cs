@@ -58,24 +58,116 @@
 
 			//DemoFunc4();
 
-			//DemoFunc5();
+			DemoFunc5();
 		}
 
 		#region DemoAccion1
+		private static void DemoAccion1()
+		{
+			Console.WriteLine("Demo Action<T>");
+
+			// Definir un Action que acepta un parámetro de tipo string y no devuelve un valor
+			Action<string> mostrarMensaje = (mensaje) =>
+			{
+				// Imprimir el mensaje en la consola
+				Console.WriteLine(mensaje);
+			};
+
+			// Invocar el Action con un mensaje específico
+			mostrarMensaje("Hola, mundo con Action<T>!");
+
+			Console.WriteLine("\n");
+		}
 		#endregion
 		#region DemoAccion2
+		public static void DemoAccion2()
+		{
+			Console.WriteLine("Demo Action<T> en Ciclos");
+
+			// Definir un Action que acepta un entero como parámetro y lo imprime
+			Action<int> imprimir = numero => Console.WriteLine(numero);
+
+			// Usar un bucle for para llamar al Action con valores del 0 al 4
+			for (int i = 0; i < 5; i++)
+				imprimir(i);
+
+			Console.WriteLine("\n");
+		}
 		#endregion
 
 
 		#region DemoFunc1
+		// Ejemplo de un Func<> sin parámetros que retorna un valor.
+		private static void DemoFunc1()
+		{
+			// Declarar un Func que retorna una cadena sin tomar parámetros.
+			// Func<string> obtenerSaludo = () => { return "Hola Mundo!"; };
+
+			Func<string> obtenerSaludo = () => "Hola Mundo!";
+
+			// Invocar la función y mostrar el resultado en la consola.
+			Console.WriteLine(obtenerSaludo());
+		}
 		#endregion
 		#region DemoFunc2
+		//  Ejemplo de un Func<> con parámetros y retorno de valor.
+		private static void DemoFunc2()
+		{
+			// Declarar un Func que toma dos enteros y retorna su suma.
+			Func<int, int, int> sumar = (x, y) => x + y;
+
+			// Invocar la función con dos números y mostrar el resultado en la consola.
+			Console.WriteLine(sumar(5, 3));
+		}
+
 		#endregion
 		#region DemoFunc3
+		//  Ejemplo de un Func<> sin parámetros que genera un número aleatorio.
+		private static void DemoFunc3()
+		{
+			// Declarar un Func que genera un número aleatorio.
+			Func<int> getRandomNumber = () => new Random().Next();
+
+			// Obtener el número aleatorio llamando a la función.
+			int numeroAleatorio = getRandomNumber();
+
+			// Imprimir el número generado.
+			Console.WriteLine("Número aleatorio: " + numeroAleatorio);
+		}
+
 		#endregion
 		#region DemoFunc4
+		// Ejemplo de un Func<> con un parámetro que convierte una cadena a un número.
+		private static void DemoFunc4()
+		{
+			// Declarar un Func que convierte una cadena a un entero.
+			Func<string, int> parseToInt = str => int.Parse(str);
+
+			// Convertir una cadena numérica a entero e imprimir el resultado.
+			string numeroComoCadena = "123";
+			int resultado = parseToInt(numeroComoCadena);
+			Console.WriteLine("El resultado de la conversión es: " + resultado);
+		}
+
 		#endregion
 		#region DemoFunc5
+		// Ejemplo de un Func<> que retorna un valor nullable.
+		private static void DemoFunc5()
+		{
+			// Declarar un Func que intenta convertir una cadena a un entero nullable.
+			Func<string, int?> tryParse = str => int.TryParse(str, out int result) ? result : (int?)null;
+
+			// Probar la función con diferentes entradas.
+			string input1 = "123";
+			string input2 = "abc";
+
+			int? resultado1 = tryParse(input1);
+			int? resultado2 = tryParse(input2);
+
+			// Imprimir los resultados.
+			Console.WriteLine("Resultado 1: " + (resultado1.HasValue ? resultado1.Value.ToString() : "null"));
+			Console.WriteLine("Resultado 2: " + (resultado2.HasValue ? resultado2.Value.ToString() : "null"));
+		}
 		#endregion
 
 	}

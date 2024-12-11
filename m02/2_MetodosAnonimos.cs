@@ -16,11 +16,11 @@ namespace m02
 			Console.WriteLine("Métodos Anónimos");
 			Console.WriteLine("-----------------------------------\n");
 
-			// DemoMetodosSinAnonimos();
-			// DemoMetodosConAnonimos();
-			// DemoMetodosAnonimos2();
-			// DemoMetodosAnonimos3();
-			// DemoMetodosAnonimosYEventos();
+			DemoMetodosSinAnonimos();
+			DemoMetodosConAnonimos();
+			DemoMetodosAnonimos2();
+			DemoMetodosAnonimos3();
+			DemoMetodosAnonimosYEventos();
 		}
 
 		#region DemoMetodosSinAnonimos
@@ -134,9 +134,9 @@ namespace m02
 		{
 			Timer myTimer = new Timer(1000);
 			myTimer.Elapsed += delegate (System.Object source, ElapsedEventArgs e)
-			{
-				Console.WriteLine("Un segundo ha pasado.");
-			};
+											{
+												Console.WriteLine("Un segundo ha pasado.");
+											};
 
 			myTimer.Start();
 			Console.WriteLine("Presiona Enter para salir.");

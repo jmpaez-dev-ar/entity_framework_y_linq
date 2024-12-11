@@ -5,7 +5,9 @@
 		static void Main(string[] args)
 		{
 			// Delegados.Demos();
-			MetodosAnonimos.Demos();
+			// MetodosAnonimos.Demos();
+			//  ExpresionesLambda.Demos();
+			// AccionYFunc.Demos();
 
 			Console.ReadKey();
 		}
