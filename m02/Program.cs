@@ -8,6 +8,8 @@
 			// MetodosAnonimos.Demos();
 			//  ExpresionesLambda.Demos();
 			// AccionYFunc.Demos();
+			// Predicados.Demos();
+			InterfacesIEnumerableYIQueryable.Demos();
 
 			Console.ReadKey();
 		}
