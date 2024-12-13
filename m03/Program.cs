@@ -1,10 +1,12 @@
-﻿namespace m03
+﻿using modulo3;
+
+namespace m03
 {
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello, World!");
+			m01_Basico.Demos();
 		}
 	}
 }

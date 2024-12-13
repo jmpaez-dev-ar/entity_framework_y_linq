@@ -8,15 +8,14 @@ namespace modulo3
 {
 	public class m01_Basico
 	{
-		static void Main(string[] args)
+		public static void Demos()
 		{
 			Ejemplo1();
-			// Ejemplo2();
-			// Ejemplo3();
-			// Ejemplo4();
-			// Ejemplo5();
-			// Ejemplo6();
-
+			Ejemplo2();
+			Ejemplo3();
+			Ejemplo4();
+			Ejemplo5();
+			Ejemplo6();
 		}
 		private static void Ejemplo6()
 		{
