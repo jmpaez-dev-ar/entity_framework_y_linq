@@ -1,6 +1,6 @@
 ﻿namespace modulo3
 {
-	public class m01_Basico
+	public class _01_Linq_Basico
 	{
 		public static void Demos()
 		{

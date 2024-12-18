@@ -1,6 +1,6 @@
 ﻿namespace modulo3
 {
-	internal class LINQ
+	public class _00_Linq
 	{
 		// DATOS COMPATIBLES CON LINQ 
 		/*
