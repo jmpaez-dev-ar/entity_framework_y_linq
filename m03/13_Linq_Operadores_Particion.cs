@@ -1,4 +1,6 @@
-﻿namespace m03
+﻿using m03.Demos.Clases;
+
+namespace m03
 {
 	public class _13_Linq_Operadores_Particion
 	{
@@ -18,6 +20,21 @@
 		 */
 		public static void Demos()
 		{
+			Console.WriteLine("Operadores de Partición");
+			// Crear una lista de números
+			List<int> numeros = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+			
+			// Take
+			//      Toma los primeros 3 elementos de la lista
+			var take = numeros.Take(3);
+			Console.WriteLine("Take:");
+			foreach (var numero in take)
+				Console.WriteLine(numero);
+
+			// TakeWhile
+			//      Toma los elementos de la lista mientras
+			//      el número sea menor a 5
+			var takeWhile = numeros.TakeWhile(n => n < 5);
 		}
 	}
 }

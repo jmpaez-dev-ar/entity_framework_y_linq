@@ -1,4 +1,6 @@
-﻿namespace m03
+﻿using m03.Demos.Clases;
+
+namespace m03
 {
 	public class _12_Linq_Operadores_Conversion
 	{
@@ -13,6 +15,22 @@
 		 */
 		public static void Demos()
 		{
+			// Crear un arreglo de números
+			int[] numbers = { 1, 2, 9, 3, 4, 5 };
+
+			//  ToList:
+			//      Convierte un arreglo de números en una lista de números
+			List<int> list1 = numbers.ToList();
+			
+			var list2 = numbers.ToList();
+
+			IEnumerable<int> list3 = numbers.ToList();
+
+
+			// ToArray:
+			//      Convierte las estudiantes en un array de objetos.
+			var estudiantes = Estudiante.ObtenerTodos();
+			var estudiantesArray = estudiantes.ToArray();
 		}
 	}
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace m03.Demos.Clases
+﻿namespace m03.Demos.Clases
 {
 	public class Producto
 	{

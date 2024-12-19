@@ -10,9 +10,6 @@ namespace m03
 		 Operadores de agrupación en LINQ:
 
 			GroupBy: Agrupa elementos por una clave común.
-			ToLookup: Crea un objeto Lookup para acceder a elementos agrupados por clave.
-			Join: Combina dos secuencias usando una clave común.
-			GroupJoin: Combina dos secuencias y agrupa los resultados por la clave común.
 		 */
 		public static void Demos()
 		{           
