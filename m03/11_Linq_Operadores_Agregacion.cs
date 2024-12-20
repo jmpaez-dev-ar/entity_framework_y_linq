@@ -20,7 +20,7 @@ namespace m03
 			Console.WriteLine("Operadores de Agregación");
 
 			// Crear una lista de números
-			var numeros = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+			var numeros = new List<int> { 200, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 			// Count: cuenta el número de elementos en la lista 'numeros'
 			var cantidad = numeros.Count();

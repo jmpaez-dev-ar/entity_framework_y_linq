@@ -19,9 +19,12 @@ namespace m03
 			// Agrupar estudiantes por edad usando GroupBy
 
 			// Utilizando la sintaxis de consulta
-			var agrupadosPorEdad =
-					from e in estudiantes
-					group e by e.Edad;
+			//var agrupadosPorEdad =
+			//		from e in estudiantes
+			//		group e by e.Edad;
+
+			// Utilizando la sintaxis de método
+			 var agrupadosPorEdad = estudiantes.GroupBy(e => e.Edad);
 
 			foreach (var grupo in agrupadosPorEdad)
 			{
