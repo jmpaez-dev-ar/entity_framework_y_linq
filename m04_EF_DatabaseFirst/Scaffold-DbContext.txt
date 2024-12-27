@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Data Source=.\sqlexpress;Initial Catalog=MiniGestionComercial;Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entidades -ContextDir Data -Context ApplicationDbContext -force
