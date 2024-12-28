@@ -18,4 +18,9 @@ public partial class Producto
     public virtual Categoria Categoria { get; set; } = null!;
 
     public virtual ICollection<DetallePedido> DetallesPedidos { get; set; } = new List<DetallePedido>();
+
+	public static implicit operator Producto(Task<Producto?> v)
+	{
+		throw new NotImplementedException();
+	}
 }
